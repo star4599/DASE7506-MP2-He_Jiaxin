@@ -1,0 +1,59 @@
+{
+  "recipe": {
+    "folds": 3,
+    "fold_seed": 20261025,
+    "base": {
+      "seed": 42,
+      "epochs": 8,
+      "batch_size": 128,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "aux_bce_weight": 0.25,
+      "gradient_clip": 5.0,
+      "input_clip": 8.0,
+      "projection_dimension": 64,
+      "tree_rounds": 20,
+      "tree_depth": 4,
+      "answer_prior_strength": 0.25
+    },
+    "head": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "epochs": 60,
+      "batch_size": 128,
+      "learning_rate": 0.01,
+      "weight_decay": 0.03,
+      "gradient_clip": 1.0,
+      "feature_clip": 6.0,
+      "delta_limit": 2.0,
+      "ranking_weight": 0.75,
+      "ranking_margin": 0.2,
+      "kl_weight": 0.01,
+      "reference_temperature": 1.0,
+      "blend_weight": 1.0
+    }
+  },
+  "fit_split": "train",
+  "validation_loaded": false,
+  "test_loaded": false,
+  "teacher_cache_used": false,
+  "existing_checkpoint_used": false,
+  "threads": 4,
+  "tree_interpreter": "D:\\py\\anaconda3\\python.exe",
+  "note": "Frozen hyperparameters from prior development; this run performs no validation/test selection.",
+  "environment": {
+    "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "2.5.3",
+    "torch": "2.7.1+cu126",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "CPU"
+  },
+  "source_sha256": {
+    "train.py": "fe3c3ca9f2192e70665e629e6d9ad212baf5799d5eee77af4136e65cd96b8be2",
+    "submission.py": "aed2740fb367594dc6c9cf8f41fefb35cffd1e8a01cb6ed0042c616c61f84e1e",
+    "train_config.json": "2d3c6a456b13dd400d23007700ece553f3df019786254b47fc8f4a0745dd39bc"
+  }
+}

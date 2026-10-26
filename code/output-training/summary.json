@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "fit_split": "train",
+  "questions": 4755,
+  "head_training_questions": 2114,
+  "teacher_models_trained": 4,
+  "head_seeds": [
+    42,
+    43,
+    44
+  ],
+  "head_epochs": 60,
+  "seconds": 20.223810499999672,
+  "asset_bytes": 291329,
+  "validation_loaded": false,
+  "test_loaded": false,
+  "checkpoint": "E:\\study\\HKU\\project\\7506\\DASE7506-2\\code\\output",
+  "sha256": {
+    "model.npz": "f9c730150364f9049a84cb21937d5f231dbb1755dc5eb27e8a624218a879241d",
+    "config.json": "465a62dfe6a848a699cfd7af50195f13ca8095af9ffb2440dba47cd0f3c336e4"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-26",
+  "selected_checkpoint": "code/output",
+  "configuration": {
+    "folds": 3,
+    "fold_seed": 20261025,
+    "base": {
+      "seed": 42,
+      "epochs": 8,
+      "batch_size": 128,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "aux_bce_weight": 0.25,
+      "gradient_clip": 5.0,
+      "input_clip": 8.0,
+      "projection_dimension": 64,
+      "tree_rounds": 20,
+      "tree_depth": 4,
+      "answer_prior_strength": 0.25
+    },
+    "head": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "epochs": 60,
+      "batch_size": 128,
+      "learning_rate": 0.01,
+      "weight_decay": 0.03,
+      "gradient_clip": 1.0,
+      "feature_clip": 6.0,
+      "delta_limit": 2.0,
+      "ranking_weight": 0.75,
+      "ranking_margin": 0.2,
+      "kl_weight": 0.01,
+      "reference_temperature": 1.0,
+      "blend_weight": 1.0
+    }
+  },
+  "weights_sha256": {
+    "model.npz": "f9c730150364f9049a84cb21937d5f231dbb1755dc5eb27e8a624218a879241d",
+    "config.json": "465a62dfe6a848a699cfd7af50195f13ca8095af9ffb2440dba47cd0f3c336e4"
+  },
+  "training": {
+    "status": "completed",
+    "fit_split": "train",
+    "questions": 4755,
+    "head_training_questions": 2114,
+    "teacher_models_trained": 4,
+    "head_seeds": [
+      42,
+      43,
+      44
+    ],
+    "head_epochs": 60,
+    "seconds": 20.223810499999672,
+    "asset_bytes": 291329,
+    "validation_loaded": false,
+    "test_loaded": false,
+    "checkpoint": "E:\\study\\HKU\\project\\7506\\DASE7506-2\\code\\output",
+    "sha256": {
+      "model.npz": "f9c730150364f9049a84cb21937d5f231dbb1755dc5eb27e8a624218a879241d",
+      "config.json": "465a62dfe6a848a699cfd7af50195f13ca8095af9ffb2440dba47cd0f3c336e4"
+    }
+  },
+  "source_sha256": {
+    "train.py": "fe3c3ca9f2192e70665e629e6d9ad212baf5799d5eee77af4136e65cd96b8be2",
+    "submission.py": "aed2740fb367594dc6c9cf8f41fefb35cffd1e8a01cb6ed0042c616c61f84e1e",
+    "train_config.json": "2d3c6a456b13dd400d23007700ece553f3df019786254b47fc8f4a0745dd39bc"
+  },
+  "inference_assets_bytes": 291329,
+  "inference_assets_MiB": 0.2778329849243164,
+  "validation_comparison": [
+    {
+      "method": "初始投票",
+      "correct": 688,
+      "n": 798,
+      "hard_correct": 245,
+      "hard_n": 355,
+      "asset_bytes": 0,
+      "prediction_process_seconds": 0.3123671000357717,
+      "scoring_process_seconds": 0.23645969992503524,
+      "full_seconds": 0.548826799960807
+    },
+    {
+      "method": "首次学习",
+      "correct": 729,
+      "n": 798,
+      "hard_correct": 286,
+      "hard_n": 355,
+      "asset_bytes": 13574,
+      "prediction_process_seconds": 0.3151866999687627,
+      "scoring_process_seconds": 0.22837629995774478,
+      "full_seconds": 0.5435629999265075
+    },
+    {
+      "method": "projected基模型",
+      "correct": 750,
+      "n": 798,
+      "hard_correct": 307,
+      "hard_n": 355,
+      "asset_bytes": 288244,
+      "prediction_process_seconds": 0.4531349999597296,
+      "scoring_process_seconds": 0.23377559997607023,
+      "full_seconds": 0.6869105999357998
+    },
+    {
+      "method": "摘要纠错对照",
+      "correct": 743,
+      "n": 798,
+      "hard_correct": 300,
+      "hard_n": 355,
+      "asset_bytes": 290731,
+      "full_seconds": 0.7353486999636516,
+      "historical_measurement": true
+    },
+    {
+      "method": "等式纠错 0.002",
+      "correct": 749,
+      "n": 798,
+      "hard_correct": 306,
+      "hard_n": 355,
+      "asset_bytes": 290897,
+      "prediction_process_seconds": 0.7016797000542283,
+      "scoring_process_seconds": 0.24509939993731678,
+      "full_seconds": 0.9467790999915451
+    },
+    {
+      "method": "最终等式纠错 0.003",
+      "correct": 748,
+      "n": 798,
+      "hard_correct": 305,
+      "hard_n": 355,
+      "asset_bytes": 291329,
+      "prediction_process_seconds": 0.732795900083147,
+      "scoring_process_seconds": 0.2820748999947682,
+      "full_seconds": 1.0148708000779152
+    }
+  ],
+  "new_vs_lr002": {
+    "fixed": [],
+    "regressed": [
+      677
+    ]
+  },
+  "new_vs_projected": {
+    "fixed": [
+      65,
+      90,
+      371,
+      499,
+      522,
+      739
+    ],
+    "regressed": [
+      9,
+      166,
+      330,
+      412,
+      457,
+      675,
+      678,
+      726
+    ]
+  },
+  "existing_user_test_score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 394,
+    "n": 467,
+    "accuracy": 84.36830835117773,
+    "scoring_seconds": 0.02942619996611029
+  },
+  "old_user_test_score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 393,
+    "n": 467,
+    "accuracy": 84.1541755888651,
+    "scoring_seconds": 0.030852299998514354
+  },
+  "test_inputs_or_references_analyzed": false,
+  "test_evaluation_run": false,
+  "new_full_test_process_timing_available": false,
+  "selection_note": "The user chose learning rate 0.003 after viewing validation 748/798 and test 394/467; test is not an independent selection-free estimate."
+}

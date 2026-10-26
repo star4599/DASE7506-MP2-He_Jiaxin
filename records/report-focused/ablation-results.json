@@ -1,0 +1,87 @@
+{
+  "rows": [
+    {
+      "name": "base_only",
+      "head_fit_and_export_seconds": 0.002097599906846881,
+      "asset_bytes": 289396,
+      "correct": 745,
+      "n": 798,
+      "hard_correct": 302,
+      "hard_n": 355,
+      "full_validation_seconds": 0.8880682999733835
+    },
+    {
+      "name": "summary_only",
+      "head_fit_and_export_seconds": 6.910389799973927,
+      "asset_bytes": 291200,
+      "correct": 744,
+      "n": 798,
+      "hard_correct": 301,
+      "hard_n": 355,
+      "full_validation_seconds": 0.7856913000578061
+    },
+    {
+      "name": "no_ranking",
+      "head_fit_and_export_seconds": 4.563489499967545,
+      "asset_bytes": 291358,
+      "correct": 747,
+      "n": 798,
+      "hard_correct": 304,
+      "hard_n": 355,
+      "full_validation_seconds": 1.0027684000087902
+    },
+    {
+      "name": "no_kl",
+      "head_fit_and_export_seconds": 4.559527300065383,
+      "asset_bytes": 291353,
+      "correct": 748,
+      "n": 798,
+      "hard_correct": 305,
+      "hard_n": 355,
+      "full_validation_seconds": 0.9779834999935701
+    },
+    {
+      "name": "seed42",
+      "head_fit_and_export_seconds": 0.0013538999482989311,
+      "asset_bytes": 290483,
+      "correct": 748,
+      "n": 798,
+      "hard_correct": 305,
+      "hard_n": 355,
+      "full_validation_seconds": 0.9736033000517637
+    },
+    {
+      "name": "seed43",
+      "head_fit_and_export_seconds": 0.001305700046941638,
+      "asset_bytes": 290483,
+      "correct": 748,
+      "n": 798,
+      "hard_correct": 305,
+      "hard_n": 355,
+      "full_validation_seconds": 0.9666879000142217
+    },
+    {
+      "name": "seed44",
+      "head_fit_and_export_seconds": 0.0014352999860420823,
+      "asset_bytes": 290483,
+      "correct": 748,
+      "n": 798,
+      "hard_correct": 305,
+      "hard_n": 355,
+      "full_validation_seconds": 0.9377160000149161
+    },
+    {
+      "name": "full",
+      "head_fit_and_export_seconds": 0.0019552999874576926,
+      "asset_bytes": 291352,
+      "correct": 748,
+      "n": 798,
+      "hard_correct": 305,
+      "hard_n": 355,
+      "full_validation_seconds": 0.9727939999429509
+    }
+  ],
+  "final_weights_unchanged": true,
+  "test_evaluation_run": false,
+  "note": "Training-time ablations refit heads on the same train OOF scores; seed ablations reuse frozen member weights. No variant replaces the final model."
+}

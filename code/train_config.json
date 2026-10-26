@@ -1,0 +1,33 @@
+{
+  "folds": 3,
+  "fold_seed": 20261025,
+  "base": {
+    "seed": 42,
+    "epochs": 8,
+    "batch_size": 128,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "aux_bce_weight": 0.25,
+    "gradient_clip": 5.0,
+    "input_clip": 8.0,
+    "projection_dimension": 64,
+    "tree_rounds": 20,
+    "tree_depth": 4,
+    "answer_prior_strength": 0.25
+  },
+  "head": {
+    "seeds": [42, 43, 44],
+    "epochs": 60,
+    "batch_size": 128,
+    "learning_rate": 0.01,
+    "weight_decay": 0.03,
+    "gradient_clip": 1.0,
+    "feature_clip": 6.0,
+    "delta_limit": 2.0,
+    "ranking_weight": 0.75,
+    "ranking_margin": 0.2,
+    "kl_weight": 0.01,
+    "reference_temperature": 1.0,
+    "blend_weight": 1.0
+  }
+}

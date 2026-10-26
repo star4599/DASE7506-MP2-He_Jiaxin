@@ -1,0 +1,43 @@
+{
+  "format": "new_disagreement_v1",
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "fit_split": "train",
+  "selection": "train_nested_folds",
+  "input_features": "evidence_arithmetic",
+  "base_config": {
+    "format": "new_ranker_trees_v1",
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "input_clip": 8.0,
+    "fit_split": "train",
+    "selection": "validation",
+    "arithmetic_checks": false,
+    "feature_mode": "projected",
+    "base_margin_scale": 1.0,
+    "answer_prior_strength": 0.25,
+    "selected_rounds": 20,
+    "projection_dimension": 64,
+    "hard_training_weight": 1.0
+  },
+  "members": [
+    {
+      "prefix": "head0_",
+      "weight": 0.3333333333333333
+    },
+    {
+      "prefix": "head1_",
+      "weight": 0.3333333333333333
+    },
+    {
+      "prefix": "head2_",
+      "weight": 0.3333333333333333
+    }
+  ],
+  "comparison_size": 0,
+  "feature_clip": 6.0,
+  "delta_limit": 2.0,
+  "reference_temperature": 1.0,
+  "blend_weight": 1.0,
+  "trained_epoch": 60,
+  "training_method": "evidence_arithmetic",
+  "description": "Correction with fixed epoch and uniform seeds selected on train folds"
+}

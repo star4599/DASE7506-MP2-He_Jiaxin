@@ -1,0 +1,16 @@
+{
+  "fit_split": "train",
+  "validation_for_reporting_only": true,
+  "seed_list": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 60,
+  "base_learning_rate": 0.003,
+  "base_weights_frozen": true,
+  "existing_train_only_teachers_reused": true,
+  "test_run": false,
+  "final_model_replaced": false,
+  "source_sha256": "573c2e6a47e892f6598f5476e25007e176a3db81acb1f4a164c915aab97a51f2"
+}

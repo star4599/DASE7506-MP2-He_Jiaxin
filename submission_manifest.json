@@ -1,0 +1,86 @@
+{
+  "release_id": "mp2-lr003-f9c730150364f904",
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "project": "mp2",
+  "student_id": "3036748919",
+  "intended_repository": "https://github.com/star4599/DASE7506-MP2-He_Jiaxin",
+  "code_version": "Use the full Git commit containing this manifest and its matching files.",
+  "created": "2026-10-26",
+  "checkpoint": "code/output",
+  "checkpoint_archive": "artifacts/model_bundle.zip",
+  "inference_assets": {
+    "files": [
+      "code/output/model.npz",
+      "code/output/config.json"
+    ],
+    "uncompressed_bytes": 291329,
+    "uncompressed_MiB": 0.2778329849243164,
+    "limit_bytes": 16777216
+  },
+  "evaluation": {
+    "validation": {
+      "protocol": "dase7506-mp2-open-hard-verifier-v5",
+      "split": "validation",
+      "correct": 748,
+      "n": 798,
+      "accuracy": 93.734335839599,
+      "scoring_seconds": 0.04168320004828274
+    },
+    "test": {
+      "protocol": "dase7506-mp2-open-hard-verifier-v5",
+      "split": "test",
+      "correct": 394,
+      "n": 467,
+      "accuracy": 84.36830835117773,
+      "scoring_seconds": 0.02942619996611029
+    },
+    "source": "Existing official scoring JSON; not rerun while packaging."
+  },
+  "training": {
+    "configuration": "code/train_config.json",
+    "plan": "code/output-training/plan.json",
+    "summary": "code/output-training/summary.json",
+    "threads": 4,
+    "device": "CPU",
+    "seconds": 20.223810499999672
+  },
+  "report": {
+    "path": "report/3036748919_MP2_He_English.docx",
+    "pages": 8,
+    "language": "English"
+  },
+  "integrity_note": "Git text normalization is disabled so recorded byte hashes survive checkout.",
+  "files_sha256": {
+    ".gitattributes": "029a10051f019eb5a88b8a440fa56e166a0fd1fe15da853fbd4a5c33483765d8",
+    ".gitignore": "adc76c559ac227d76a3fed43ea26e8a6b918e6cbb9167a4ef530660def7585f1",
+    "README.md": "c89590126cf155a4aa6ab5f2a8bea38eb1b0e3aa976e6bd6befb4a4980e2635a",
+    "verify_submission.py": "ffd5b40af1007650bb0319789b259e8553c4f152cc88f9d44f6f5954530e7530",
+    "code/submission.py": "aed2740fb367594dc6c9cf8f41fefb35cffd1e8a01cb6ed0042c616c61f84e1e",
+    "code/train.py": "fe3c3ca9f2192e70665e629e6d9ad212baf5799d5eee77af4136e65cd96b8be2",
+    "code/train_config.json": "2d3c6a456b13dd400d23007700ece553f3df019786254b47fc8f4a0745dd39bc",
+    "code/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "code/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "code/check_data.py": "32f203e156e3019f87bb038ade4f303da21ca2f1694bb678a3ddc44661f0b533",
+    "code/requirements.txt": "5c12d85e7c08038d1dd9ffbf8119d12ce808885230a47e2bf65dcd9f114659d5",
+    "code/requirements-training.txt": "c1e2302b712fac783bfe3c75be3cfc382242c52f86abe6ef6783b670362ccdd7",
+    "code/PACKAGE_MANIFEST.json": "2e9b714598e1addba61545f0d7ce4891d9d11aaf567fb341420d36694fcfd656",
+    "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+    "code/output/model.npz": "f9c730150364f9049a84cb21937d5f231dbb1755dc5eb27e8a624218a879241d",
+    "code/output/config.json": "465a62dfe6a848a699cfd7af50195f13ca8095af9ffb2440dba47cd0f3c336e4",
+    "code/output/test-score.json": "4df27f57c4ef6b5c1bb8cbd601f6dcf88cd6e6be4fe6b36616d74321858be514",
+    "code/output/test-predictions.json": "4ff7a19b8f9bdc7909fc090c1840223b3b8abd9e3afde4c39d2ada8dcc475479",
+    "code/output/validation-score.json": "fc48ff3203414f247ca556f204b56ebf48b7fad14d8f86b3cc5b507e60e10de0",
+    "code/output/validation-predictions.json": "ad423cbebbf18548730c70f386098ec3c9db83666b372d93177e7c0403a5a3eb",
+    "code/output-training/plan.json": "fc8d5a1e4a5c46065f92a2b548b9ac49fca27ad805d3ce22a1c3c8b28f5b1fae",
+    "code/output-training/summary.json": "8f2e29cca9b2e23772b6391213204cf50c74f98e3c17ba181d83a2b932298215",
+    "code/output-training/head-history.csv": "4b217970e2ce22895b16c95fc8e8f0bf96156adeba8b8ec890de40ec947d4b64",
+    "code/output-training/oof-audit.json": "99052c47b45b20cfd9d98029f2059e0bcf29f76afbbb595499bc71d114fa83b4",
+    "records/final-lr003/frozen-result.json": "939dd935077820df693ff681a10e2980429a644f2f000b07edf44326d53ccca9",
+    "records/report-focused/ablation-plan.json": "2fb8bc5bb861d5550f2be2f4ceeef1247da9f623c9e902d5273c5cd903a596ae",
+    "records/report-focused/ablation-results.json": "ff941268b6e2675db0ba4e856df90e349450f13851d4b351e8d762adbae1859f",
+    "records/report-focused/diagnostics.json": "4180ff5d59e66f7bfaaae44473df13cd171957347ed6bee2ae05e6752a2896c4",
+    "report/3036748919_MP2_He_English.docx": "87be867c1f785c50a4bbc1c81efdade0d95461b06a121593ba0c2c370d23a9ed",
+    "artifacts/model_bundle.zip": "5fc3ca5f1c5fd1817ad5aa12697e07bb17d5cacb449943c6b4aa605e7d714d38"
+  }
+}

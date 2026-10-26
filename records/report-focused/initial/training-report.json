@@ -1,0 +1,94 @@
+{
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "fit_split": "train",
+  "selection_split": "validation",
+  "objective": "sum((standardized_embedding @ weights + bias - binary_label)**2) + alpha * sum(weights**2)",
+  "score_note": "Ridge scores are ranking scores, not calibrated probabilities.",
+  "seed": 42,
+  "randomness": "None: closed-form fit; no random sampling.",
+  "train_questions": 4755,
+  "train_candidates": 19020,
+  "train_positive_candidates": 14353,
+  "search_grid": {
+    "alphas": [
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "vote_weights": [
+      0.0,
+      0.125,
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ]
+  },
+  "tie_breaking": "First configuration in grid order; earliest candidate index.",
+  "validation": {
+    "vote": {
+      "correct": 688,
+      "n": 798,
+      "accuracy": 86.21553884711778,
+      "disagreement_n": 355,
+      "disagreement_correct": 245,
+      "disagreement_accuracy": 69.01408450704226
+    },
+    "linear": {
+      "alpha": 1.0,
+      "vote_weight": 0.0,
+      "correct": 716,
+      "n": 798,
+      "accuracy": 89.72431077694235,
+      "disagreement_n": 355,
+      "disagreement_correct": 273,
+      "disagreement_accuracy": 76.90140845070422
+    },
+    "hybrid": {
+      "alpha": 10.0,
+      "vote_weight": 0.25,
+      "correct": 729,
+      "n": 798,
+      "accuracy": 91.35338345864662,
+      "disagreement_n": 355,
+      "disagreement_correct": 286,
+      "disagreement_accuracy": 80.56338028169014
+    }
+  },
+  "bundles": {
+    "linear": {
+      "path": "runs\\stage2\\linear",
+      "file_bytes": 13572,
+      "uncompressed_payload_bytes": 12582,
+      "sha256": {
+        "model.npz": "cc4aff7cabc3b4b3cd8e54904d37b7a214ad787ad013d3c39102fe5b2d2d3428",
+        "config.json": "32cba4b86c1ac9c650b5909f7f767a95e45ea1396745b091a4599271530266a8"
+      }
+    },
+    "hybrid": {
+      "path": "runs\\stage2\\hybrid",
+      "file_bytes": 13574,
+      "uncompressed_payload_bytes": 12584,
+      "sha256": {
+        "model.npz": "19a71a9464aa3bbe4b50870bdcf1759c71c9cdb62109ae244d0f2b7b8b77aa14",
+        "config.json": "624ff3adb339085036d0f2b99135c6c35510b1a89b46cb3a64f87c40a908a2fc"
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "2.5.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "threads": 4,
+    "device": "CPU"
+  },
+  "source_sha256": {
+    "train.py": "496c471a36ac13f1a164a330b498a8dcaa5d88e694cb9073efaafe0ada5f051f",
+    "submission_model.py": "9eb75a66727b6c25e3b4755ee6405c6ab0fe65acb9891b9493c71ec7ef84fe06",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+  },
+  "data_manifest_sha256": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+  "training_script_seconds_excluding_process_startup": 2.130264100036584
+}

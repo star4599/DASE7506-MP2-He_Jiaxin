@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "method": "standardized_ridge_with_optional_answer_votes",
+  "alpha": 10.0,
+  "vote_weight": 0.25,
+  "fit_split": "train",
+  "selection_split": "validation",
+  "seed": 42,
+  "feature_dimension": 1024
+}
