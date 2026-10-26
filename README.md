@@ -1,5 +1,4 @@
-# DASE7506 MP2 — Offline Candidate Selection
-
+# DASE7506 MP2 
 **Author:** He Jiaxin  
 **Student ID:** 3036748919  
 **Repository:** [star4599/DASE7506-MP2-He_Jiaxin](https://github.com/star4599/DASE7506-MP2-He_Jiaxin)  
