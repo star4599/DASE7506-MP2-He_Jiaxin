@@ -80,4 +80,4 @@ f9c730150364f9049a84cb21937d5f231dbb1755dc5eb27e8a624218a879241d
 
 The official data, numerical parser and evaluation tools come from the DASE7506 MP2 starter package. GSM8K questions/references and course-provided Qwen3-0.6B candidate traces/embeddings retain their supplied licenses and notices in `code/data/`. The parser, scorer and supplied data are unchanged.
 
-An AI coding assistant helped with implementation, debugging, error analysis, experiment organization and report drafting/translation. Training, evaluation and ablation records are retained for review.
+An AI coding assistant helped with implementation, debugging, error analysis, experiment organization. Training, evaluation and ablation records are retained for review.
